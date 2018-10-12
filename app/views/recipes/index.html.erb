@@ -1,0 +1,21 @@
+<h1 align="center">Listing all recipes</h1>
+<hr />
+<%= @recipes.each do |r| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="center">
+
+      </section>
+    </div>
+    <div class="col-md-8 well ">
+
+      <p> <strong> Recipe name : </strong> <%= r.name %></p>
+      <p> <strong> Description : </strong> <%= truncate(r.description, length: 150) %></p>
+      <p> <strong> Created Time : </strong> <%= time_ago_in_words(r.created_at ) %>ago</p>
+
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+<% end %>
